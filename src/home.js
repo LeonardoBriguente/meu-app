@@ -13,8 +13,10 @@ export default function Home() {
                 <li>
                     <Link to="/atividade2">Atividade 2</Link>
                 </li>
+                <li>
+                    <Link to="/atividade3">Atividade 3</Link>
+                </li>
             </ul>
         </nav>
-        {/* <Atividade1/> */}
     </>)
 }
