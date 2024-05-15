@@ -1,5 +1,6 @@
-import { Gallery } from "./components/atividade3/topico1-1"; //Quando foi colocado o <Gallery/> automaticamente me foi retornado isso com {}, e gera um erro quando não é retirado as chaves
-import { Profile } from "./components/atividade3/topico1-1";
+import { Link } from "react-router-dom";
+import { Profile, Topico3, Topico4, Topico5, Topico6 } from "./components/atividade3/allComponents";
+import Gallery from "./components/atividade3/allComponents";
 
 export default function Atividade3() {
     const text = "Valor passado com chaves";
@@ -12,10 +13,18 @@ export default function Atividade3() {
         <Profile />
 
         <h2>Tópico 1.3: Escrevendo marcações com JSX</h2>
-        <p>Aprendendo sobre marcações</p>
-        <p style={{ backgroundColor: 'lightblue', width: '200px' }}>Sobre o camelCase usando style</p>
+        <Topico3 />
 
         <h2>Tópico 1.4: JavaScript em JSX com chaves</h2>
+        <Topico4 />
 
+        <h2>Tópico 1.5: Passando props para um componente</h2>
+        <Topico5 />
+        {/* Solocitar ajuda. */}
+
+        <h2>Tópico 6: Renderização condicional</h2>
+        <Topico6 />
+
+        <Link to="/">Home Page</Link>
     </>)
 }
