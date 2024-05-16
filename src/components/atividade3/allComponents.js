@@ -26,7 +26,8 @@ export function Topico3() {
 
 export function Topico4() {
     const name = "React";
-    const obj = { name: "objeto", cor: { color: 'pink' } };
+   // const obj = { name: "objeto", cor: "{ color: 'pink' }" };
+    const obj = { name: "objeto", cor:'pink' };
 
     const today = new Date();
 
@@ -43,8 +44,8 @@ export function Topico4() {
 
         <p>O dia de hoje é: {formatDate(today)}</p>
         <p style={{ color: "green" }}>Uso do double curlies</p>
-        <p >Usando {obj.name}</p>
-        {/* Erro style={{obj.cor}} */}
+        <p style={{cor: obj.cor}}>Usando {obj.name}</p>
+        {/* Erro  */}
     </>)
 }
 
