@@ -57,15 +57,15 @@ export function Topico5() {
 function Item({ name, isPacked }) {
     return (
         <li className="item">
-          {isPacked ? (
-            <del>
-              {name + ' ✅'}
-            </del>
-          ) : (
-            name
-          )}
+            {isPacked ? (
+                <del>
+                    {name + ' ✅'}
+                </del>
+            ) : (
+                name
+            )}
         </li>
-      );
+    );
 }
 
 export function Topico6() {
@@ -87,5 +87,45 @@ export function Topico6() {
                 />
             </ul>
         </section>
+    </>)
+}
+
+const people = [{ id: 0, name: 'Douglas Matheus', profession: 'Programador', },
+{ id: 1, name: 'Paulo Roberto', profession: 'Matemático', },
+{ id: 2, name: 'Geni dos Santos', profession: 'Cientista', },
+{ id: 3, name: 'Lucas Taxila', profession: 'Lutador', },
+{ id: 4, name: 'Donavam Duncan', profession: 'Programador', }];
+
+
+export function Topico7() {
+    const chemists = people.filter(person => person.profession === 'Programador');
+    const listItems = chemists.map(person =>
+        <li>
+            <p>
+                <b>{person.name}:</b> {person.profession}
+            </p>
+        </li>
+    );
+    return <ul>{listItems}</ul>;
+
+}
+
+function Receita({ drinkers }){
+    return ( 
+    <ol> <li>Ferva {drinkers} xícaras de água.</li>
+    <li>Adicione {drinkers} colheres de chá e {0.5 * drinkers} colheres de açúcar.</li>
+    <li>Adicione {0.5 * drinkers} xícaras de leite para ferver e açúcar ao gosto.</li>
+    </ol> )
+}
+
+export function Topico8(){
+
+    return(<>
+    <h2>Receita bebida para dias desesperadores</h2>
+    <h3>Para 2 pessoas</h3>
+    <Receita drinkers={2}/>
+
+    <h3>Em caso de reunião de desesperados</h3>
+    <Receita drinkers={6}/>
     </>)
 }
