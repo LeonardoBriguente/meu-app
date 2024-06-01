@@ -5,6 +5,7 @@ import Home from "./home";
 import Atividade2 from "./atividade2";
 import Atividade3 from "./atividade3";
 import Atividade4 from "./atividade4";
+import Atividade5 from "./atividade5";
 
 export default function MyRoutes(){
     return(<>
@@ -15,7 +16,7 @@ export default function MyRoutes(){
                 <Route path="/atividade2" element={<Atividade2/>}/>
                 <Route path="/atividade3" element={<Atividade3/>}/>
                 <Route path="/atividade4" element={<Atividade4/>}/>
-
+                <Route path="/atividade5" element={<Atividade5 />} />
 
             </Routes>
         </BrowserRouter>
