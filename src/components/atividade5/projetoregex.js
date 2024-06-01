@@ -77,7 +77,7 @@ export default function Projeto() {
         type="text"
         value={text}
         onChange={handleTextChange}
-        placeholder="Digite algo..."
+        placeholder="Digite algo"
       />
       <div className="charStats">
         <p>Text Length: {charStats.length}</p>
